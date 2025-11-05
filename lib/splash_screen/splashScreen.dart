@@ -29,6 +29,7 @@ class _SplashPageState extends State<SplashPage> {
       body: Center(
         child: Image.asset(
           'assets/images/splash.png',
+          fit: BoxFit.cover,
           width: double.infinity.w,
           height: double.infinity.h,
         ),
