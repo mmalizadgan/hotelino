@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotelino/features/onboardin/presentation/onboarding_provider.dart';
+import 'package:hotelino/features/onboardin/presentation/widget/onboarding_indicator.dart';
 import 'package:hotelino/features/onboardin/presentation/widget/onboarding_item.dart';
 import 'package:provider/provider.dart';
 
@@ -36,6 +38,12 @@ class _OnboardingPageState extends State<OnboardingPage> {
               onPageChanged: onboardingProvider.updateCurrentPage,
             ),
           ),
+          SizedBox(height: 20.w),
+          OnboardingIndicator(
+            currentIndex: onboardingProvider.currentPage,
+            totalPages: totalPage,
+          ),
+          SizedBox(height: 159.w),
         ],
       ),
     );
