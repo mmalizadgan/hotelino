@@ -1,0 +1,22 @@
+class OnboardingRepository {
+  final List<Map<String, String>> onboardingData = [
+    {
+      "title": "بهترین هتل های ایران و جهان",
+      "decription":
+          "تجربه اقامت در بهترین و اقتصادی ترین هتل ها در سراسر جهان را با تیم ما تجربه کنید.",
+      "image": "assets/images/onboarding_1.png",
+    },
+    {
+      "title": "تنوع محل های اقامتی",
+      "decription":
+          "بزرگ ترین اپلیکیشن اقامتی با بیش از 200 نوع هتل، متل، اتاق، سوئیت و...",
+      "image": "assets/images/onboarding_2.png",
+    },
+    {
+      "title": "مناسب ترین قیمت ها",
+      "decription":
+          "با توجه به بودجه شما، ما مناسب ترین محل اقامتی را به شما پیشنهاد می دهیم.",
+      "image": "assets/images/onboarding_3.png",
+    },
+  ];
+}
