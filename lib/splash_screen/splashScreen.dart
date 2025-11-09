@@ -16,7 +16,7 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
 
     Timer(Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, AppRoute.myHomePage);
+      Navigator.pushReplacementNamed(context, AppRoute.onboarding);
     });
   }
 
