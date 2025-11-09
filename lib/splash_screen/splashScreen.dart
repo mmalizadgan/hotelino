@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'dart:async';
-
-import 'package:hotelino/myHomePage.dart';
+import 'package:hotelino/routes/app_route.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
@@ -17,9 +16,7 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
 
     Timer(Duration(seconds: 3), () {
-      Navigator.of(
-        context,
-      ).pushReplacement(MaterialPageRoute(builder: (context) => MyHomePage()));
+      Navigator.pushReplacementNamed(context, AppRoute.myHomePage);
     });
   }
 
