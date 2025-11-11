@@ -37,6 +37,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   provider: ^6.1.5+1
   persistent_bottom_nav_bar: ^6.2.1
+  flutter_svg: ^2.2.2
 
 dev_dependencies:
   flutter_test:
