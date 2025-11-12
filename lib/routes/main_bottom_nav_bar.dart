@@ -97,6 +97,17 @@ class _MainBottomNavBarState extends State<MainBottomNavBar> {
       screens: _buildScreen(),
       items: _navBarItems(),
       backgroundColor: Theme.of(context).colorScheme.surface,
+      navBarStyle: NavBarStyle.style7,
+      hideNavigationBarWhenKeyboardAppears: true,
+      stateManagement: true,
+      handleAndroidBackButtonPress: true,
+      confineToSafeArea: true,
+      animationSettings: NavBarAnimationSettings(
+        navBarItemAnimation: ItemAnimationSettings(
+          duration: Duration(microseconds: 300),
+          curve: Curves.easeIn,
+        ),
+      ),
     );
   }
 }
