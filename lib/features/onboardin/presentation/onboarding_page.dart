@@ -90,10 +90,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                         height: 50.h,
                         child: ElevatedButton(
                           onPressed: () {
-                            Navigator.pushReplacementNamed(
-                              context,
-                              AppRoute.myHomePage,
-                            );
+                            Navigator.pushNamed(context, AppRoute.home);
                           },
                           child: const Text("شروع رزرو هتل ها"),
                         ),

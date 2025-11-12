@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:hotelino/core/constants/constants.dart';
 import 'package:hotelino/routes/test.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
@@ -18,7 +21,72 @@ class _MainBottomNavBarState extends State<MainBottomNavBar> {
   }
 
   _buildScreen() {
-    return [home(), favorit(), booking(), profile()];
+    return [Home(), favorit(), booking(), profile()];
+  }
+
+  List<PersistentBottomNavBarItem> _navBarItems() {
+    return [
+      PersistentBottomNavBarItem(
+        icon: SvgPicture.asset(
+          "assets/images/nav_home.svg",
+          width: 24.w,
+          height: 24.h,
+          colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+        ),
+        activeColorPrimary: AppColors.primaryColor,
+        inactiveIcon: SvgPicture.asset(
+          "assets/images/nav_home.svg",
+          width: 20.w,
+          height: 20.h,
+          colorFilter: ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+        ),
+      ),
+      PersistentBottomNavBarItem(
+        icon: SvgPicture.asset(
+          "assets/images/nav_favorite.svg",
+          width: 24.w,
+          height: 24.h,
+          colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+        ),
+        activeColorPrimary: AppColors.primaryColor,
+        inactiveIcon: SvgPicture.asset(
+          "assets/images/nav_favorite.svg",
+          width: 20.w,
+          height: 20.h,
+          colorFilter: ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+        ),
+      ),
+      PersistentBottomNavBarItem(
+        icon: SvgPicture.asset(
+          "assets/images/nav_booking.svg",
+          width: 24.w,
+          height: 24.h,
+          colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+        ),
+        activeColorPrimary: AppColors.primaryColor,
+        inactiveIcon: SvgPicture.asset(
+          "assets/images/nav_booking.svg",
+          width: 20.w,
+          height: 20.h,
+          colorFilter: ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+        ),
+      ),
+      PersistentBottomNavBarItem(
+        icon: SvgPicture.asset(
+          "assets/images/nav_profile.svg",
+          width: 24.w,
+          height: 24.h,
+          colorFilter: ColorFilter.mode(Colors.white, BlendMode.srcIn),
+        ),
+        activeColorPrimary: AppColors.primaryColor,
+        inactiveIcon: SvgPicture.asset(
+          "assets/images/nav_profile.svg",
+          width: 20.w,
+          height: 20.h,
+          colorFilter: ColorFilter.mode(Colors.grey, BlendMode.srcIn),
+        ),
+      ),
+    ];
   }
 
   @override
@@ -26,8 +94,9 @@ class _MainBottomNavBarState extends State<MainBottomNavBar> {
     return PersistentTabView(
       context,
       controller: _controller,
-      onItemSelected: (value) {},
-      screens: [],
+      screens: _buildScreen(),
+      items: _navBarItems(),
+      backgroundColor: Theme.of(context).colorScheme.surface,
     );
   }
 }
