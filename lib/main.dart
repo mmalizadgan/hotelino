@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:hotelino/core/theme/app_theme.dart';
 import 'package:hotelino/core/theme/theme_provider.dart';
+import 'package:hotelino/features/home/data/repositories/hotel_repository.dart';
+import 'package:hotelino/features/home/presentation/provider/home_provider.dart';
 import 'package:hotelino/features/onboardin/data/repositories/onboarding_repository.dart';
 import 'package:hotelino/features/onboardin/presentation/onboarding_provider.dart';
 import 'package:hotelino/routes/app_route.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hotelino/shared/services/json_data_services.dart';
 import 'package:provider/provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
+  final hotelRepository = HotelRepository(jsonDataServices: JsonDataServices());
   runApp(
     MultiProvider(
       providers: [
@@ -21,6 +25,7 @@ void main() {
         ChangeNotifierProvider(
           create: (_) => OnboardingProvider(OnboardingRepository()),
         ),
+        ChangeNotifierProvider(create: (_) => HomeProvider(hotelRepository)),
       ],
       child: const MyApp(),
     ),
