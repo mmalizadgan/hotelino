@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:hotelino/core/theme/app_theme.dart';
 import 'package:hotelino/core/theme/theme_provider.dart';
 import 'package:hotelino/features/home/data/repositories/hotel_repository.dart';
+import 'package:hotelino/features/home/data/repositories/profile_repository.dart';
 import 'package:hotelino/features/home/presentation/provider/home_provider.dart';
+import 'package:hotelino/features/home/presentation/provider/profile_provider.dart';
 import 'package:hotelino/features/onboardin/data/repositories/onboarding_repository.dart';
 import 'package:hotelino/features/onboardin/presentation/onboarding_provider.dart';
 import 'package:hotelino/routes/app_route.dart';
@@ -26,6 +28,9 @@ void main() {
           create: (_) => OnboardingProvider(OnboardingRepository()),
         ),
         ChangeNotifierProvider(create: (_) => HomeProvider(hotelRepository)),
+        ChangeNotifierProvider(
+          create: (_) => ProfileProvider(ProfileRepository(), hotelRepository),
+        ),
       ],
       child: const MyApp(),
     ),
