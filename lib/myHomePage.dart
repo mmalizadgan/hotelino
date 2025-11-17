@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hotelino/core/theme/theme_provider.dart';
-import 'package:hotelino/routes/main_bottom_nav_bar.dart';
 import 'package:provider/provider.dart';
 
 class MyHomePage extends StatelessWidget {
