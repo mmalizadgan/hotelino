@@ -1,8 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SearchBarWidget extends StatelessWidget {
+class SearchBarWidget extends StatefulWidget {
   const SearchBarWidget({super.key});
+
+  @override
+  State<SearchBarWidget> createState() => _SearchBarWidgetState();
+}
+
+class _SearchBarWidgetState extends State<SearchBarWidget> {
+  final FocusNode _searchFocusNode = FocusNode();
+
+  @override
+  void dispose() {
+    _searchFocusNode.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +43,7 @@ class SearchBarWidget extends StatelessWidget {
             ),
             Expanded(
               child: TextField(
+                focusNode: _searchFocusNode,
                 textDirection: TextDirection.rtl,
                 decoration: InputDecoration(
                   filled: false,
@@ -43,7 +57,7 @@ class SearchBarWidget extends StatelessWidget {
               ),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () => _searchFocusNode.requestFocus(),
               icon: Icon(Icons.search, color: theme.colorScheme.outline),
             ),
           ],
