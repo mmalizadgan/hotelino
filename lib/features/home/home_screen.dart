@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotelino/features/home/presentation/provider/home_provider.dart';
+import 'package:hotelino/features/home/presentation/widget/ad_banner.dart';
 import 'package:hotelino/features/home/presentation/widget/home_app_bar.dart';
 import 'package:hotelino/features/home/presentation/widget/search_bar.dart';
 import 'package:provider/provider.dart';
@@ -19,6 +20,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             SizedBox(height: 16.h),
             SearchBarWidget(),
+            AdBanner(),
           ],
         ),
       ),
