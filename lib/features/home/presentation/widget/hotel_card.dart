@@ -35,12 +35,12 @@ class HotelCard extends StatelessWidget {
                       SizedBox(width: 2.w),
                       Text(
                         "${hotel.rating} (${priceFormater(hotel.reviewCount)})",
-                        style: Theme.of(context).textTheme.titleSmall,
+                        style: Theme.of(context).textTheme.labelLarge,
                       ),
                       Spacer(),
                       Text(
                         hotel.name,
-                        style: Theme.of(context).textTheme.titleLarge,
+                        style: Theme.of(context).textTheme.titleMedium,
                       ),
                       SizedBox(width: 8.w),
                     ],
@@ -63,7 +63,7 @@ class HotelCard extends StatelessWidget {
                     padding: EdgeInsets.only(right: 8.w),
                     child: Text(
                       " شب از  ${priceFormater(hotel.pricePerNight)}",
-                      style: Theme.of(context).textTheme.titleLarge,
+                      style: Theme.of(context).textTheme.titleMedium,
                     ),
                   ),
                   SizedBox(height: 8.h),
