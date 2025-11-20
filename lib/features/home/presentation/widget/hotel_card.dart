@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hotelino/core/utils/price_formater.dart';
 import 'package:hotelino/features/home/data/models/hotels.dart';
 import 'package:hotelino/features/home/presentation/provider/favorite_item_provider.dart';
 import 'package:hotelino/routes/test.dart';
@@ -33,7 +34,9 @@ class HotelCard extends StatelessWidget {
                       SizedBox(width: 12.w),
                       Icon(Icons.star, size: 20, color: Colors.amber),
                       SizedBox(width: 2.w),
-                      Text("${hotel.rating} (${hotel.reviewCount})"),
+                      Text(
+                        "${hotel.rating} (${priceFormater(hotel.reviewCount)})",
+                      ),
                     ],
                   ),
                 ],
