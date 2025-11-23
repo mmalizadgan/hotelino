@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class GlassMorfism {
+class GlassMorfism extends StatelessWidget {
   final Widget child;
   final double borderRadius;
   final double blur;
