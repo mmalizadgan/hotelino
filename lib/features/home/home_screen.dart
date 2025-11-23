@@ -34,6 +34,18 @@ class HomeScreen extends StatelessWidget {
                 );
               },
             ),
+            SizedBox(height: 40.h),
+            Consumer<HomeProvider>(
+              builder: (context, homeProvider, child) {
+                return HotelListSection(
+                  hotels: homeProvider.getspecialOffers(),
+                  title: "پیشنهاد ویژه روز",
+                  seeAllHotels: () =>
+                      Navigator.of(context).pushNamed(AppRoute.favorites),
+                );
+              },
+            ),
+            SizedBox(height: 40.h),
           ],
         ),
       ),
