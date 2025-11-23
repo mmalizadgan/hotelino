@@ -9,7 +9,8 @@ class GlassMorfism extends StatelessWidget {
   final Color borderColor;
   final Color backgroundColor;
 
-  GlassMorfism({
+  const GlassMorfism({
+    super.key,
     required this.child,
     this.borderRadius = 20.0,
     this.blur = 10,
