@@ -70,7 +70,7 @@ class AnimatedFavoriteButtonState extends State<AnimatedFavoriteButton>
                   backgroundColor: Colors.white60.withValues(alpha: 0.1),
                   child: Icon(
                     Icons.favorite_rounded,
-                    color: widget.isFavorite ? Colors.red : Colors.grey,
+                    color: widget.isFavorite ? Colors.red : Colors.white,
                   ),
                 ),
               );
