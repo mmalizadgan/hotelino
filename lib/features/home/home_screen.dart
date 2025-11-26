@@ -5,6 +5,7 @@ import 'package:hotelino/features/home/presentation/widget/ad_banner.dart';
 import 'package:hotelino/features/home/presentation/widget/home_app_bar.dart';
 import 'package:hotelino/features/home/presentation/widget/hotel_list_section.dart';
 import 'package:hotelino/features/home/presentation/widget/search_bar.dart';
+import 'package:hotelino/features/home/presentation/widget/story_carousel_slider.dart';
 import 'package:hotelino/routes/app_route.dart';
 import 'package:provider/provider.dart';
 
@@ -45,7 +46,15 @@ class HomeScreen extends StatelessWidget {
                 );
               },
             ),
-            SizedBox(height: 40.h),
+            SizedBox(height: 16.h),
+            Consumer<HomeProvider>(
+              builder: (context, homeProvider, child) {
+                return StoryCarouselSlider(
+                  images: homeProvider.getStoryImages(),
+                  title: homeProvider.storyTittle,
+                );
+              },
+            ),
           ],
         ),
       ),
