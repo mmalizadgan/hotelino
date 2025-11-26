@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hotelino/features/home/data/models/hotels.dart';
 import 'package:hotelino/features/home/presentation/provider/home_provider.dart';
 import 'package:hotelino/features/home/presentation/widget/ad_banner.dart';
 import 'package:hotelino/features/home/presentation/widget/home_app_bar.dart';

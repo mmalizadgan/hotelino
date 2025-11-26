@@ -27,11 +27,11 @@ class AppColors {
 
 class HomePageDataConstants {
   static const List<String> _favoritesHotelIds = ["1", "3", "5", "7"];
-  static const List<String> _discountedHotelIds = ["1", "3", "5", "7"];
+  static const List<String> _discountedHotelIds = ["2", "8", "5", "4"];
   static const List<String> _recentlyViewedHotelIds = ["1", "3", "5", "7"];
-  static const List<String> _popularHotelIds = ["1", "3", "5", "7"];
-  static const List<String> _specialOffersHotelIds = ["1", "3", "5", "7"];
-  static const List<String> _newestHotelIds = ["1", "3", "5", "7"];
+  static const List<String> _popularHotelIds = ["1", "2", "3", "4"];
+  static const List<String> _specialOffersHotelIds = ["4", "8", "10", "7"];
+  static const List<String> _newestHotelIds = ["1", "8", "6", "2"];
   static HomePageData get homePageData => HomePageData(
     favorites: _favoritesHotelIds,
     discounted: _discountedHotelIds,

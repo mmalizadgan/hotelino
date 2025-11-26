@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hotelino/core/constants/constants.dart';
+import 'package:hotelino/features/home/data/models/hotels.dart';
 import 'package:hotelino/features/home/home_screen.dart';
 import 'package:hotelino/routes/test.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
