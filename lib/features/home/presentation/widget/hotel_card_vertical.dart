@@ -82,7 +82,7 @@ class HotelCardVertical extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "${hotel.bedType.count} ${hotel.bedType.type}",
+                        " ${hotel.bedType.details}",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 16.sp,
