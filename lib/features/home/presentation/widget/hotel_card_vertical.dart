@@ -48,9 +48,10 @@ class HotelCardVertical extends StatelessWidget {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(8),
+              padding: EdgeInsets.all(8),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   SizedBox(height: 4.h),
                   Text(
@@ -62,6 +63,8 @@ class HotelCardVertical extends StatelessWidget {
                   ),
                   SizedBox(height: 2.h),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
                         "${hotel.city} ${hotel.country}",
@@ -80,6 +83,7 @@ class HotelCardVertical extends StatelessWidget {
                   ),
                   SizedBox(height: 2.h),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
                         " ${hotel.bedType.details}",

@@ -3,7 +3,8 @@ import 'package:hotelino/features/home/data/models/home_page_data.dart';
 
 class AppConstants {
   static const String hotelsData = "assets/data/hotels.json";
-  // static const String baseUrl = 'https://dunijet.ir/content/projects/hotelino/';
+  static const String baseUrl =
+      'https://old.dunijet.ir/content/projects/hotelino/';
 }
 
 class AppColors {
