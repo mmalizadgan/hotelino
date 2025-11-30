@@ -16,4 +16,3 @@ class HotelRepository {
     });
   }
 }
-//187
