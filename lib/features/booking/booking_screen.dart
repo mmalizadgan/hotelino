@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:hotelino/features/booking/provider/booking_provider.dart';
+import 'package:provider/provider.dart';
 
 class BookingScreen extends StatefulWidget {
   const BookingScreen({super.key});
@@ -19,6 +21,21 @@ class _BookingScreenState extends State<BookingScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return;
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          "فرم رزور هتل",
+          style: Theme.of(context).textTheme.headlineMedium,
+        ),
+      ),
+      body: const Padding(padding: EdgeInsets.all(16),
+      child: SingleChildScrollView(
+        child: Consumer<BookingProvider>(builder: (context, bookingProvider, child) {
+         return
+        },child: ,),
+      ),
+      ),
+    );
   }
 }
