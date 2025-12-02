@@ -29,12 +29,21 @@ class _BookingScreenState extends State<BookingScreen> {
           style: Theme.of(context).textTheme.headlineMedium,
         ),
       ),
-      body: const Padding(padding: EdgeInsets.all(16),
-      child: SingleChildScrollView(
-        child: Consumer<BookingProvider>(builder: (context, bookingProvider, child) {
-         return
-        },child: ,),
-      ),
+      body: Padding(
+        padding: EdgeInsets.all(16),
+        child: SingleChildScrollView(
+          child: Consumer<BookingProvider>(
+            builder: (context, bookingProvider, child) {
+              return Form(
+                key: _formKey,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [],
+                ),
+              );
+            },
+          ),
+        ),
       ),
     );
   }
