@@ -6,12 +6,12 @@ import 'package:hotelino/features/home/presentation/widget/hotel_card.dart';
 class HotelListSection extends StatelessWidget {
   final String title;
   final List<Hotel> hotels;
-  // final VoidCallback seeAllHotels;
+  final VoidCallback seeAllHotels;
   const HotelListSection({
     super.key,
     required this.hotels,
     required this.title,
-    //  this.seeAllHotels,
+    required this.seeAllHotels,
   });
 
   @override

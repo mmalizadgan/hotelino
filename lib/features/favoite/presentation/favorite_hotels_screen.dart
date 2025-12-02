@@ -4,6 +4,7 @@ import 'package:hotelino/features/favoite/widget/favorite_item_card.dart';
 import 'package:hotelino/features/home/presentation/provider/favorite_item_provider.dart';
 import 'package:hotelino/features/home/presentation/provider/profile_provider.dart';
 import 'package:hotelino/features/home/presentation/widget/hotel_list_section.dart';
+import 'package:hotelino/routes/app_route.dart';
 import 'package:hotelino/shared/widget/search_bar.dart';
 import 'package:provider/provider.dart';
 
@@ -55,6 +56,8 @@ class FavoriteHotelsScreen extends StatelessWidget {
                 if (profileProvider.recentlyViewdHotels.isNotEmpty) {
                   return HotelListSection(
                     hotels: profileProvider.recentlyViewdHotels,
+                    seeAllHotels: () =>
+                        Navigator.of(context).pushNamed(AppRoute.favorites),
                     title: "بازدید های اخیر",
                   );
                 } else {
