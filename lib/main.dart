@@ -11,6 +11,7 @@ import 'package:hotelino/features/onboardin/presentation/onboarding_provider.dar
 import 'package:hotelino/routes/app_route.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotelino/shared/services/json_data_services.dart';
+import 'package:persian_datetime_picker/persian_datetime_picker.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -82,6 +83,12 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
       child: Consumer<ThemeProvider>(
         builder: (context, themeProvider, child) {
           return MaterialApp(
+            locale: const Locale("fa", "IR"),
+            supportedLocales: const [Locale("fa", "IR"), Locale("en", "US")],
+            localizationsDelegates: const [
+              PersianMaterialLocalizations.delegate,
+              PersianCupertinoLocalizations.delegate,
+            ],
             debugShowCheckedModeBanner: false,
             title: 'Hotelino',
             theme: AppTheme.lightTheme,
