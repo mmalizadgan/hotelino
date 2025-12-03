@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:hotelino/features/booking/presentation/widget/booking_form_field.dart';
 import 'package:hotelino/features/booking/provider/booking_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -38,7 +40,61 @@ class _BookingScreenState extends State<BookingScreen> {
                 key: _formKey,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [],
+                  children: [
+                    BookingFormField(
+                      title: "نام و نام خانوادگی",
+                      hint: "نام و نام خانوادگی خود را وارد کنید...",
+                      initialValue: bookingProvider.booking.fullName,
+                      keyboardType: TextInputType.text,
+                      validator: (fullName) {
+                        if (fullName == null || fullName.isEmpty) {
+                          return "لطفا نام خود را کامل بنویسید";
+                        }
+                        return null;
+                      },
+                      onSaved: (fullName) {
+                        if (fullName != null) {
+                          bookingProvider.setFullName(fullName);
+                        }
+                      },
+                    ),
+                    SizedBox(height: 32.h),
+                    BookingFormField(
+                      title: "مقصد",
+                      hint: "مقصد خود را وارد کنید...",
+                      initialValue: bookingProvider.booking.destination,
+                      keyboardType: TextInputType.text,
+                      validator: (destination) {
+                        if (destination == null || destination.isEmpty) {
+                          return "لطفا مقصد را کامل بنویسید";
+                        }
+                        return null;
+                      },
+                      onSaved: (destination) {
+                        if (destination != null) {
+                          bookingProvider.setDestanation(destination);
+                        }
+                      },
+                    ),
+                    SizedBox(height: 32.h),
+                    BookingFormField(
+                      title: "تعداد نفرات",
+                      hint: "تعداد نفرات خود را وارد کنید...",
+                      initialValue: bookingProvider.booking.numberOfGuests,
+                      keyboardType: TextInputType.text,
+                      validator: (numberOfGuests) {
+                        if (numberOfGuests == null || numberOfGuests.isEmpty) {
+                          return "لطفا مقصد را کامل بنویسید";
+                        }
+                        return null;
+                      },
+                      onSaved: (numberOfGuests) {
+                        if (numberOfGuests != null) {
+                          bookingProvider.setNumberOfGuests(numberOfGuests);
+                        }
+                      },
+                    ),
+                  ],
                 ),
               );
             },

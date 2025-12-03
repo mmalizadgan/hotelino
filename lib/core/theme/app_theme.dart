@@ -77,7 +77,7 @@ class AppTheme {
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12),
           borderSide: const BorderSide(
-            color: AppColors.primaryColor,
+            color: AppColors.lightBorder,
             width: 1.5,
           ),
         ),
@@ -100,6 +100,9 @@ class AppTheme {
         outline: Colors.grey[500],
         primaryFixed: AppColors.primaryColor,
         surfaceContainerLow: Colors.grey[200],
+      ),
+      inputDecorationTheme: baseLight.inputDecorationTheme.copyWith(
+        fillColor: baseLight.colorScheme.surface,
       ),
     );
   }
@@ -197,6 +200,9 @@ class AppTheme {
       colorScheme: basedark.colorScheme.copyWith(
         outline: Colors.grey[500],
         primaryFixed: AppColors.primaryColor,
+      ),
+      inputDecorationTheme: basedark.inputDecorationTheme.copyWith(
+        fillColor: basedark.colorScheme.surface,
       ),
     );
   }
