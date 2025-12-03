@@ -78,24 +78,6 @@ class _BookingScreenState extends State<BookingScreen> {
                       },
                     ),
                     SizedBox(height: 32.h),
-                    BookingFormField(
-                      title: "تعداد نفرات",
-                      hint: "تعداد نفرات خود را وارد کنید...",
-                      initialValue: bookingProvider.booking.numberOfGuests,
-                      keyboardType: TextInputType.text,
-                      validator: (numberOfGuests) {
-                        if (numberOfGuests == null || numberOfGuests.isEmpty) {
-                          return "لطفا مقصد را کامل بنویسید";
-                        }
-                        return null;
-                      },
-                      onSaved: (numberOfGuests) {
-                        if (numberOfGuests != null) {
-                          bookingProvider.setNumberOfGuests(numberOfGuests);
-                        }
-                      },
-                    ),
-                    SizedBox(height: 32.h),
                     DatePickerField(
                       title: "تاریخ رفت و تاریخ برگشت",
                       hint: "بازه اقامت را انتخاب کنید",
@@ -114,6 +96,25 @@ class _BookingScreenState extends State<BookingScreen> {
                         }
                       },
                     ),
+                    SizedBox(height: 32.h),
+                    BookingFormField(
+                      title: "تعداد نفرات",
+                      hint: "تعداد نفرات خود را وارد کنید...",
+                      initialValue: bookingProvider.booking.numberOfGuests,
+                      keyboardType: TextInputType.number,
+                      validator: (numberOfGuests) {
+                        if (numberOfGuests == null || numberOfGuests.isEmpty) {
+                          return "لطفا تعداد نفرات را وارد کنید ";
+                        }
+                        return null;
+                      },
+                      onSaved: (numberOfGuests) {
+                        if (numberOfGuests != null) {
+                          bookingProvider.setNumberOfGuests(numberOfGuests);
+                        }
+                      },
+                    ),
+                    SizedBox(height: 32.h),
                   ],
                 ),
               );
