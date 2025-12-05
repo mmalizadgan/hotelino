@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hotelino/features/booking/presentation/widget/booking_form_field.dart';
+import 'package:hotelino/features/booking/presentation/widget/number_text_field.dart';
 import 'package:hotelino/features/booking/provider/booking_provider.dart';
 import 'package:hotelino/shared/widget/date_picker_field.dart';
 import 'package:provider/provider.dart';
@@ -115,6 +116,20 @@ class _BookingScreenState extends State<BookingScreen> {
                       },
                     ),
                     SizedBox(height: 32.h),
+                    NumberTextField(
+                      initialValue: bookingProvider.booking.phoneNumber,
+                      validator: (phoneNumber) {
+                        if (phoneNumber == null || phoneNumber.isEmpty) {
+                          return "لظفا شماره را وارد کنید";
+                        }
+                        return null;
+                      },
+                      onSaved: (phoneNumber) {
+                        if (phoneNumber != null) {
+                          bookingProvider.setPhoneNumber(phoneNumber);
+                        }
+                      },
+                    ),
                   ],
                 ),
               );
