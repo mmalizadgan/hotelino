@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hotelino/core/constants/constants.dart';
+import 'package:hotelino/core/utils/keyboard.dart';
 import 'package:hotelino/features/booking/booking_screen.dart';
 import 'package:hotelino/features/favoite/presentation/favorite_hotels_screen.dart';
 import 'package:hotelino/features/home/home_screen.dart';
@@ -99,6 +100,9 @@ class _MainBottomNavBarState extends State<MainBottomNavBar> {
       controller: _controller,
       screens: _buildScreen(),
       items: _navBarItems(),
+      onItemSelected: (pageIndex) {
+        unFocusEditors(context);
+      },
       backgroundColor: Theme.of(context).colorScheme.surface,
       navBarStyle: NavBarStyle.style7,
       hideNavigationBarWhenKeyboardAppears: true,
