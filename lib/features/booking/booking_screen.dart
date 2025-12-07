@@ -7,13 +7,15 @@ import 'package:hotelino/shared/widget/date_picker_field.dart';
 import 'package:provider/provider.dart';
 
 class BookingScreen extends StatefulWidget {
-  const BookingScreen({super.key});
+  static final GlobalKey<BookingScreenState> bookingScreenGlobalKey =
+      GlobalKey<BookingScreenState>();
+  BookingScreen({Key? key}) : super(key: bookingScreenGlobalKey);
 
   @override
-  State<BookingScreen> createState() => _BookingScreenState();
+  State<BookingScreen> createState() => BookingScreenState();
 }
 
-class _BookingScreenState extends State<BookingScreen> {
+class BookingScreenState extends State<BookingScreen> {
   final _formKey = GlobalKey<FormState>();
 
   void resetForm() {

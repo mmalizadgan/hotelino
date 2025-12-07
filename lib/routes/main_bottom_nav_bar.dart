@@ -102,6 +102,9 @@ class _MainBottomNavBarState extends State<MainBottomNavBar> {
       items: _navBarItems(),
       onItemSelected: (pageIndex) {
         unFocusEditors(context);
+        if (pageIndex != 2) {
+          BookingScreen.bookingScreenGlobalKey.currentState?.resetForm();
+        }
       },
       backgroundColor: Theme.of(context).colorScheme.surface,
       navBarStyle: NavBarStyle.style7,
