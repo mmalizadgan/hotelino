@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class TermsWidget extends StatefulWidget {
-  const TermsWidget({super.key});
+  static final GlobalKey<_TermsWidgetState> termsKey =
+      GlobalKey<_TermsWidgetState>();
+  TermsWidget({Key? key}) : super(key: termsKey);
 
   @override
   State<TermsWidget> createState() => _TermsWidgetState();
@@ -9,6 +11,12 @@ class TermsWidget extends StatefulWidget {
 
 class _TermsWidgetState extends State<TermsWidget> {
   bool isChecked = false;
+
+  resetChecked() {
+    setState(() {
+      isChecked = false;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -25,15 +33,15 @@ class _TermsWidgetState extends State<TermsWidget> {
                 context,
               ).textTheme.bodyMedium?.copyWith(color: Colors.grey.shade700),
               children: [
-                const TextSpan(text: "قوانین برنامه"),
+                const TextSpan(text: "قوانین برنامه "),
                 TextSpan(
-                  text: "هتلینو",
+                  text: "هتلینو ",
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     color: Theme.of(context).colorScheme.primary,
                   ),
                 ),
-                const TextSpan(text: "را خوانده و آنها را میپزیم."),
+                const TextSpan(text: "را خوانده و آنها را میپزیم. "),
               ],
             ),
             textDirection: TextDirection.rtl,

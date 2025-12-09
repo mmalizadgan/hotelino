@@ -22,6 +22,7 @@ class BookingScreenState extends State<BookingScreen> {
   void resetForm() {
     Future.delayed(Duration(milliseconds: 100), () {
       _formKey.currentState?.reset();
+      TermsWidget.termsKey.currentState?.resetChecked();
       setState(() {});
     });
   }
