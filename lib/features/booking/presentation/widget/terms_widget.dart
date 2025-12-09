@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotelino/core/constants/constants.dart';
+import 'package:hotelino/core/utils/keyboard.dart';
 
 class TermsWidget extends StatefulWidget {
   final FormFieldValidator<bool>? validator;
@@ -119,6 +120,7 @@ class _TermsWidgetState extends State<TermsWidget> {
   }
 
   void _showTermsDialog(BuildContext context) {
+    unFocusEditors(context);
     showModalBottomSheet(
       context: context,
       builder: (context) {
