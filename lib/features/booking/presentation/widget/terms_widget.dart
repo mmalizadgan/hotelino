@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hotelino/core/constants/constants.dart';
 
 class TermsWidget extends StatefulWidget {
   final FormFieldValidator<bool>? validator;
@@ -65,10 +66,14 @@ class _TermsWidgetState extends State<TermsWidget> {
                 ),
                 Checkbox(
                   side: BorderSide(
-                    width: 1.5,
+                    width: field.hasError ? 1.5 : 2,
                     color: field.hasError
-                        ? Theme.of(field.context).colorScheme.error
-                        : Theme.of(field.context).colorScheme.primary,
+                        ? isChecked
+                              ? Theme.of(context).colorScheme.primary
+                              : Theme.of(context).colorScheme.error
+                        : isChecked
+                        ? Theme.of(context).colorScheme.primary
+                        : AppColors.lightBorder,
                   ),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(4),
