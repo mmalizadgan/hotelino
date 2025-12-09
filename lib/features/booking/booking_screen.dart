@@ -135,8 +135,16 @@ class BookingScreenState extends State<BookingScreen> {
                       },
                     ),
                     SizedBox(height: 32.h),
-                    TermsWidget(),
-                    SizedBox(height: 32.h),
+                    TermsWidget(
+                      initialValue: false,
+                      validator: (termsWidget) {
+                        if (termsWidget == null || termsWidget == false) {
+                          return "لطفا با قوانین برنامه موافقت کنید";
+                        }
+                        return null;
+                      },
+                    ),
+                    SizedBox(height: 16.h),
                     SizedBox(
                       width: double.infinity,
                       child: ElevatedButton(
