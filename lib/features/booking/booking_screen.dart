@@ -136,6 +136,20 @@ class BookingScreenState extends State<BookingScreen> {
                     ),
                     SizedBox(height: 32.h),
                     TermsWidget(),
+                    SizedBox(height: 32.h),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          if (_formKey.currentState!.validate()) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text("با موفقیت ثبت شد")),
+                            );
+                          }
+                        },
+                        child: Text("جستجوی هتل ها"),
+                      ),
+                    ),
                   ],
                 ),
               );
