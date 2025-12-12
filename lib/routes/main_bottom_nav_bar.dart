@@ -6,7 +6,7 @@ import 'package:hotelino/core/utils/keyboard.dart';
 import 'package:hotelino/features/booking/booking_screen.dart';
 import 'package:hotelino/features/favoite/presentation/favorite_hotels_screen.dart';
 import 'package:hotelino/features/home/home_screen.dart';
-import 'package:hotelino/routes/test.dart';
+import 'package:hotelino/features/profile/profile_screen.dart';
 import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 
 class MainBottomNavBar extends StatefulWidget {
@@ -25,7 +25,12 @@ class _MainBottomNavBarState extends State<MainBottomNavBar> {
   }
 
   _buildScreen() {
-    return [HomeScreen(), FavoriteHotelsScreen(), BookingScreen(), profile()];
+    return [
+      HomeScreen(),
+      FavoriteHotelsScreen(),
+      BookingScreen(),
+      ProfileScreen(),
+    ];
   }
 
   List<PersistentBottomNavBarItem> _navBarItems() {
