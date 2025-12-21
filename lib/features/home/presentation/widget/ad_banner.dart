@@ -57,7 +57,7 @@ class AdBanner extends StatelessWidget {
                   ),
                   child: Text("همه هتل ها"),
                 ),
-                SizedBox(height: 20.h),
+                SizedBox(height: 10.h),
               ],
             ),
           ),
