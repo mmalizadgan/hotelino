@@ -68,6 +68,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                     ],
                   ),
+                  SizedBox(height: 22.h),
+                  Text(
+                    profile.name,
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  ),
+                  SizedBox(height: 16.h),
+                  Text(
+                    profile.email,
+                    style: Theme.of(context).textTheme.labelLarge,
+                  ),
+                  SizedBox(height: 40.h),
                 ],
               ),
             ),
