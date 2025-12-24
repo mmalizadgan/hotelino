@@ -42,3 +42,12 @@ class HomePageDataConstants {
     newest: _newestHotelIds,
   );
 }
+
+class SvgIcons {
+  static const String profile = 'assets/icons/svg/profile.svg';
+  static const String notification = 'assets/icons/svg/notification.svg';
+  static const String carbonPassword = 'assets/icons/svg/carbon_password.svg';
+  static const String favoriteList = 'assets/icons/svg/favoriteList.svg';
+  static const String payment = 'assets/icons/svg/payment.svg';
+  static const String setting = 'assets/icons/svg/setting.svg';
+}

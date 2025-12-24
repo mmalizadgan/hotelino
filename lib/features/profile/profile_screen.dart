@@ -1,7 +1,11 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:hotelino/core/constants/constants.dart';
 import 'package:hotelino/features/home/presentation/provider/profile_provider.dart';
+import 'package:hotelino/features/profile/widget/profile_option_item.dart';
+import 'package:hotelino/features/profile/widget/profile_svg_icon_style.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
@@ -79,6 +83,36 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     style: Theme.of(context).textTheme.labelLarge,
                   ),
                   SizedBox(height: 40.h),
+                  ProfileOptionItem(
+                    title: "اطلاعات صفحه کاربری",
+                    icon: AppSvgIcon(asset: SvgIcons.profile),
+                    onTap: () {},
+                  ),
+                  ProfileOptionItem(
+                    title: "اعلان ها",
+                    icon: AppSvgIcon(asset: SvgIcons.notification),
+                    onTap: () {},
+                  ),
+                  ProfileOptionItem(
+                    title: "لیست مورد علاقه ها",
+                    icon: AppSvgIcon(asset: SvgIcons.favoriteList),
+                    onTap: () {},
+                  ),
+                  ProfileOptionItem(
+                    title: "فراموشی رمز عبور",
+                    icon: AppSvgIcon(asset: SvgIcons.carbonPassword),
+                    onTap: () {},
+                  ),
+                  ProfileOptionItem(
+                    title: "روش های پرداخت",
+                    icon: AppSvgIcon(asset: SvgIcons.payment),
+                    onTap: () {},
+                  ),
+                  ProfileOptionItem(
+                    title: "تتنظیمات",
+                    icon: AppSvgIcon(asset: SvgIcons.setting),
+                    onTap: () {},
+                  ),
                 ],
               ),
             ),
